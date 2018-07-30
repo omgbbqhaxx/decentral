@@ -6,7 +6,7 @@ menu:
   Team: /team/
   Services: /services/
   Contact: /contact/
-  
+
 rss: /atom.xml
 
 # Content
@@ -14,17 +14,17 @@ excerpt_link: Read More
 fancybox: true # whether or not to load the fancybox library
 
 # Integrations
-disqus_shortname: 
+disqus_shortname:
 google_analytics:
-swiftype_install_key: 
+swiftype_install_key:
 
 # Social
 social:
-  github: https://github.com/lingqingmeng
+  github: https://github.com/decentral-inc/
   twitter: https://twitter.com/lingqingmeng
-  facebook: https://www.facebook.com/lingqingmeng
+  facebook: https://www.facebook.com/decentralsolutions
   rss: atom.xml
-  linkedin: https://www.linkedin.com/in/ling-qing-meng-90a35552/
+  linkedin: https://www.linkedin.com/company/decentral-solutions/
   stackoverflow: https://stackoverflow.com/users/2163873/ling-qing-meng
 
 # Miscellaneous
