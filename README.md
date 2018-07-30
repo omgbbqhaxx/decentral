@@ -1,19 +1,19 @@
 # Hexo Corporate
 
 Hexo Corporate is a full-featured Hexo theme based on the Metronic Corporate
-Frontend freebie framework.  
+Frontend freebie framework.
 
 Live example: [Link](http://hexotest.computerlab.io) | [Source](https://github.com/ptsteadman/hexo-theme-corporate-example)
 
 This theme is useful for companies interested in using Hexo to create a
 professional website with an attractive landing page, company blog, contact
-information, and portfolio.  
+information, and portfolio.
 
-![Hexo Corporate blog page.](https://s3.amazonaws.com/ptsteadman-images/Corporate.png)
+![Hexo Corporate blog page.](./.img/decentral.jpeg)
 
 **Features:**
 
-- custom landing page / index 
+- custom landing page / index
 - blog posts with tags and categories
 - project portfolio
 - contact form with google maps
@@ -24,47 +24,52 @@ information, and portfolio.
 - social links
 - metronic css framework components
 
-
 ## Install
 
-``` bash
+```bash
 git clone https://github.com/ptsteadman/hexo-theme-corporate.git themes/corporate
 ```
 
 ## Enable
 
-1. **Add example pages.** 
+1.  **Add example pages.**
 
-	Copy all of the contents of `themes/corporate/_source` to `source`.
-	This includes a sample landing page and contact, project, and
-	about pages.
+    Copy all of the contents of `themes/corporate/_source` to `source`.
+    This includes a sample landing page and contact, project, and
+    about pages.
 
-	```bash
-	cp -r themes/corporate/_source/* source
-	```
+    ```bash
+    cp -r themes/corporate/_source/* source
+    ```
 
-2. **Enable theme.** 
-	Modify the root site `_config.yml` so that `theme` is set to `corporate`. 
+2.  **Enable theme.**
+    Modify the root site `_config.yml` so that `theme` is set to `corporate`.
 
-	```yml
-	# Extensions
-	## Plugins: http://hexo.io/plugins/
-	## Themes: http://hexo.io/themes/
-	theme: corporate # change this
+    ```yml
 
-	```
+    ```
 
-	Finally, run `npm install` and then `hexo server` to test out the site.
+# Extensions
 
-3. **Optional: Enable custom landing page.**
+## Plugins: http://hexo.io/plugins/
 
-	To use custom landing page instead of the default archive index, remove
-	the line containing hexo-generator-index from package.json in the project root.
-	Then, edit `source/index.ejs`.
+## Themes: http://hexo.io/themes/
+
+theme: corporate # change this
+
+    ```
+
+    Finally, run `npm install` and then `hexo server` to test out the site.
+
+3.  **Optional: Enable custom landing page.**
+
+    To use custom landing page instead of the default archive index, remove
+    the line containing hexo-generator-index from package.json in the project root.
+    Then, edit `source/index.ejs`.
 
 ### Update
 
-``` bash
+```bash
 cd themes/corporate
 git pull
 ```
@@ -73,7 +78,7 @@ git pull
 
 Edit `themes/corporate/_config.yml` for theme-specific configuration.
 
-``` yml
+```yml
 # Header Menu
 menu:
   Home: /
@@ -81,7 +86,7 @@ menu:
   Blog: /archives/ # can set archive-dir in root config to custom value
   Contact: /contact/
   About: /about/
-   
+
 rss: /atom.xml
 
 # Content
@@ -89,9 +94,9 @@ excerpt_link: Read More
 fancybox: true # whether or not to load the fancybox library
 
 # Integrations
-disqus_shortname: 
+disqus_shortname:
 google_analytics:
-swiftype_install_key: 
+swiftype_install_key:
 
 # Social
 social:
@@ -116,10 +121,9 @@ address_1: 140 Metropolitan Avenue
 address_2: 5th Floor
 address_3: Brooklyn, NY 11249
 skype: ptsteadman
-lat: 40.715911 
+lat: 40.715911
 long: -73.962147
 ```
-
 
 ## Features
 
@@ -131,7 +135,7 @@ Edit the header menu in the themes `_config.yml` to create links to these pages.
 
 You can use [metronic CSS components](http://keenthemes.com/metronic-theme/) to build these pages.
 
-``` yml
+```yml
 # Header Menu
 menu:
   Home: /
@@ -145,13 +149,13 @@ menu:
 
 You enable **Swiftype** search funcationality by editing the theme's `_config.yml`.
 
-``` yml
+```yml
 swiftype_install_key: XXX_XXXXXXXXXXXXXXXX
 ```
 
 This `install key` can be found at your own engine's install page:
 
-![](http://ppoffice.github.io/hexo-theme-icarus/gallery/swiftype_install.jpg "")
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/swiftype_install.jpg)
 
 Finally, don't forget to save your swiftype configuration to complete the installation.
 
@@ -159,25 +163,25 @@ Finally, don't forget to save your swiftype configuration to complete the instal
 
 Set `thumbnail` in post frontmatter to display an image on the blog/archive page:
 
-	thumbnail: https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png
+    thumbnail: https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png
 
 ### Lede
 
 Set `lede` in post frontmatter to display a custom bit of text distinct from an excerpt:
 
-	lede: "This text will appear by the thumbnail in the blog page."
+    lede: "This text will appear by the thumbnail in the blog page."
 
 ### Author
 
-Set `author` in post frontmatter to display an author's name.  Set `default_author` in the
+Set `author` in post frontmatter to display an author's name. Set `default_author` in the
 site's `_config.yml` to determine author if the frontmatter value is not set.
 
-	author: "Patrick Steadman"
-
+    author: "Patrick Steadman"
 
 ### Color Schemes
 
 Hexo Corporate has multiple color schemes, including:
+
 - red
 - gray
 - green
@@ -209,4 +213,3 @@ The only limitation is that you are not permitted to use this theme in a stock
 items that sold in any theme marketplaces(e.g: themeforest.net,
 wrapbootstrap.com, etc...).
 ```
-
