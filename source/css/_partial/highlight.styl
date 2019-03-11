@@ -49,6 +49,10 @@ $line-numbers
     table
       margin: 0
       width: auto
+      max-width: 100%
+      display: block
+    tr
+      display flex
     td
       border: none
       padding: 0
@@ -66,6 +70,8 @@ $line-numbers
       padding-right: 20px
     .line
       height: font-size * line-height
+    .code
+      overflow: hidden
   .gist
     margin: 0 article-padding * -1
     border-style: solid

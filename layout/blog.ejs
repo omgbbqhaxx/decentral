@@ -1,0 +1,74 @@
+<div class="container container-full-w">
+    <div class="page-main">
+        <div class="page-header">
+            <% if (site.categories.length){ %>
+                <div class="categories-list">
+                    <% var catList = Array
+                            .from( Object.values(site.categories.data) )
+
+                    catList.map(function(category) {
+                        var categoryPosts = 0;
+                        var categoryPath = '';
+                        site.posts.data.map(function(post) {
+                            if(post.categories.data.length) {
+                                for(var i = 0; i < post.categories.data.length; i++) {
+                                    if(category.name == post.categories.data[i].name) {
+                                        categoryPosts++;
+                                        categoryPath = post.categories.data[i].path;
+                                        break;
+                                    }
+                                }
+                            }
+                        })
+                    %>
+                    <a href="<%- url_for(categoryPath) %>" class="category-link">
+                        <span class="category"><%= category.name %> (<%= categoryPosts %>)</span>
+                    </a>
+                    <% }); %>
+                </div>
+            <% } %>
+            <% if (site.tags.length){ %>
+                <div class="tags-list">
+                    <% var tagsList = Array
+                            .from( Object.values(site.tags.data) )
+                            .sort((a, b) => {
+                                if(a.name < b.name) { return -1; }
+                                if(a.name > b.name) { return 1; }
+                                return 0;
+                            })
+                        tagsList.map(function(tag) {
+                            var tagPath = '';
+
+                            site.posts.data.map(function(post) {
+                                if(post.tags.data.length) {
+                                    for(var i = 0; i < post.tags.data.length; i++) {
+                                        if(tag.name == post.tags.data[i].name) {
+                                            tagPath = post.tags.data[i].path;
+                                            break;
+                                        }
+                                    }
+                                }
+                            })
+                    %>
+                    <a href="<%- url_for(tagPath) %>" class="tag-link">
+                        <span class="tag"><%= tag.name %></span>
+                    </a>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+        <div class="content">
+            <div class="articles">
+                <%
+                    var limit = config.per_page
+                    site.posts.sort('date', -1).limit(-1).each(function(post){
+                %>
+                    <%- partial('_partial/posts-article', { 'post': post }) %>
+                <% }) %>
+            </div>
+            <div class="load-more" id="load-more" style="display: none">
+                <div class="load-more-btn" id="load-more">load more posts</div>
+            </div>
+        </div>
+    </div>
+</div>

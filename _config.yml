@@ -1,11 +1,11 @@
 # Header Menu
 menu:
-  Home: /
-  Case Studies: /tags/Case-Studies/
+#  Home: /
+  Case Studies: /case-studies/
   Blog: /blog/ # can set archive-dir in root config to custom value
-  Team: /team/
-  Services: /services/
-  Contact: /contact/
+#  Team: /team/
+#  Services: /services/
+#  Contact: /contact/
 
 rss: /atom.xml
 
@@ -22,10 +22,8 @@ swiftype_install_key:
 social:
   github: https://github.com/decentral-inc/
   twitter: https://twitter.com/lingqingmeng
-  facebook: https://www.facebook.com/decentralsolutions
-  rss: atom.xml
+  facebook: https://www.facebook.com/decentralinc
   linkedin: https://www.linkedin.com/company/decentral-solutions/
-  stackoverflow: https://stackoverflow.com/users/2163873/ling-qing-meng
 
 # Miscellaneous
 color_scheme: blue   # options: blue, gray, green, orange, red, turquoise

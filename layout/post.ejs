@@ -1,8 +1,18 @@
-<div class="container">
+<div class="container <% if (page.layout == 'post') { %>container-post<% } %>">
   <ul class="breadcrumb">
     <li><a href="/">Home</a></li>
-    <li><a href="<%= theme.menu ? theme.menu.Blog : '/archives/' %>">Blog</a></li>
-    <li class="active">Post</li>
+    <li><a href="<%
+            var blogLink = theme.menu ? theme.menu.Blog : '/blog/'
+            var blogName = 'Blog'
+      for(var i = 0; i < page.tags.data.length; i++) {
+        if(page.tags.data[i].name.toLowerCase() == 'case studies') {
+          blogLink = theme.menu ? theme.menu['Case Studies'] : '/case-studies/'
+          blogName = 'Case Studies'
+          break;
+        }
+      } %>
+      <%= blogLink %>"><%= blogName %></a></li>
+    <li class="active"><%= page.title || 'Post' %></li>
   </ul>
   <section id="main">
     <%- partial('_partial/post/title', {class_name: 'article-title', post: page,

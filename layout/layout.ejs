@@ -1,8 +1,15 @@
 <%- partial('_partial/head') %>
-<body class="corporate">
-  <%- partial('_partial/header', null, { path: path }) %>
-  <%- body %>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+<body class="corporate <% if(page.layout == 'index'){ %>index<% } %>" id="corporate">
+  <%-
+  partial('_partial/header', { 'index': page.layout == 'index' ? true : false }, { path: path })
+  %>
+  <div class="main" <% if(page.layout == 'index'){ %> id="fullpage" <% } %> >
+      <%- body %>
+  </div>
+  <% if(page.layout != 'index'){ %>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <% } else { %>
+  <% } %>
   <%- partial('_partial/scripts') %>
 </body>
 </html>

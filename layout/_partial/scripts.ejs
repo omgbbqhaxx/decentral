@@ -20,12 +20,23 @@
         Layout.init();    
         Layout.initOWL();
         Layout.initTwitter();
-        Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
-        Layout.initNavScrolling(); 
+        //Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
+        //Layout.initNavScrolling();
+      if(window.location.pathname == '/') {
+        Layout.initSectionsScrolling();
+      }
 	new WOW().init();
     });
 </script>
 <!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE-SPECIFIC PLUGINS -->
+<% if (page.layout == "index"){ %>
+    <%- js('metronic/assets/plugins/fullpage/fullpage.js') %>
+    <script>
+
+    </script>
+<% } %>
 
 <!-- BEGIN PAGE-SPECIFIC PLUGINS --> 
 <% if (page.title == "Projects"){ %>

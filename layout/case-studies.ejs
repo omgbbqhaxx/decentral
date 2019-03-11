@@ -1,0 +1,24 @@
+<div class="container container-full-w">
+    <div class="page-main">
+        <div class="content">
+            <%
+            var postsFiltered = site.posts.filter(function(post) {
+              var tags = post.tags.data;
+              var result = tags.filter( function(tag) {
+                return tag.name == 'Case Studies'
+              });
+              return result.length ? true : false;
+            }); %>
+            <div class="articles">
+                <%
+                postsFiltered.sort('date', -1).limit(-1).each(function(post){
+                %>
+                    <%- partial('_partial/posts-article', { 'post': post }) %>
+                <% }) %>
+            </div>
+            <div class="load-more" id="load-more" style="display: none">
+                <div class="load-more-btn">load more posts</div>
+            </div>
+        </div>
+    </div>
+</div>

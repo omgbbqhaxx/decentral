@@ -322,6 +322,26 @@ Custom Scrollbars
 	min-height: 500px;
 }
 
+.container.container-post {
+	text-align: left;
+	max-width: 740px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+	.container.container-post h1 {
+		font-size: 2em;
+	}
+}
+
+
+@media (max-width: 479px) {
+	.container.container-post {
+		width: calc(100% - 30px);
+	}
+}
+
 /***
 Pre-Header and pre-header elements
 ***/
@@ -330,7 +350,7 @@ Pre-Header and pre-header elements
 	border-bottom: 1px solid #eee;
 	padding-top: 10px;
 	line-height: 1.2;
-	font-family: 'Open Sans', sans-serif;
+	font-family: Roboto, 'Open Sans', sans-serif;
 	font-weight: 300;
 	background: #fff;
 }
@@ -445,7 +465,16 @@ body.page-header-fixed {
 
 .header .container {
   position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
+
+.header .container:before,
+.header .container:after {
+	display: none;
+}
+
 .ie8 .header {
 	border-bottom: 1px solid #eee;
 }
@@ -1116,7 +1145,7 @@ steps block and steps block elements
 	float: left;
 }
 .ecommerce .title-wrapper h1, .title-wrapper em {
-	font-family: 'Open Sans', sans-serif;
+	font-family: Roboto, 'Open Sans', sans-serif;
 	color: #fff;
 	font-weight: 400;
 }
@@ -1794,7 +1823,7 @@ Custom icon buttons
 }
 
 .icon-btn div {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, 'Open Sans', sans-serif;
   margin-top: 5px;
   margin-bottom: 10px;  
   color: #000;
@@ -1804,7 +1833,7 @@ Custom icon buttons
 
 .icon-btn .badge {
   position: absolute;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, 'Open Sans', sans-serif;
   font-size: 11px !important;
   font-weight: 300;
   top: -5px;
@@ -1981,6 +2010,22 @@ Demo Utils
 }
 #topcontrol {
 	z-index: 99999;
+}
+#topcontrol .default {
+	display: none;
+}
+#topcontrol .dark {
+	display: block;
+}
+#topcontrol.dark .default {
+	display: block;
+}
+#topcontrol.dark .dark{
+	display: none;
+}
+
+#topcontrol {
+	display: none;
 }
 
 /* faq page */
@@ -2659,12 +2704,16 @@ Demo Utils
 .blog-item .blog-info {
   margin: 20px 0;
   padding: 8px 0;
-  border-top: solid 1px #ECEBEB;
-  border-bottom: solid 1px #ECEBEB;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .blog-item .blog-info li {
-  padding-left: 13px; 
-  border-left: solid 1px #ECEBEB;
+  padding-left: 13px;
+}
+.blog-item .blog-info li.blog-socials {
+  min-width: 200px;
+	margin-right: 0;
 }
 .blog-item .blog-info li:first-child {
   padding-left: 0; 

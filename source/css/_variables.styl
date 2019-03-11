@@ -4,7 +4,7 @@ vendor-prefixes = webkit moz ms official
 
 // Colors
 color-default = #555
-color-grey = #999
+//color-grey = #999
 color-border = #ddd
 color-link = #258fb8
 color-background = #eee
@@ -17,6 +17,20 @@ color-twitter = #00aced
 color-facebook = #3b5998
 color-pinterest = #cb2027
 color-google = #dd4b39
+
+color-bg-grey = #484a57
+color-bg-dark-grey = #252432
+color-bg-blue-grey = #525d6f
+color-bg-white = #fff
+
+color-grey = #484a57
+color-text-grey = #c8c8c8
+color-text-selected = #64aed9
+color-bg-tag = #42a3f6
+color-text-white = #fff
+
+color-category = #252424
+
 
 // Fonts
 font-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -55,6 +69,47 @@ gutter-width = 20px
 columns = main-column + _sidebar-column
 
 // Media queries
+mq-mobile-small = "screen and (max-width: 360px)"
+mq-mobile-iphonex = "screen and (max-width: 375px)"
 mq-mobile = "screen and (max-width: 479px)"
+mq-mobile-h = "screen and (orientation: landscape) and (max-width: 479px)"
+mq-mobile-v = "screen and (orientation: portrait) and (max-width: 479px)"
+
 mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
+mq-tablet-h = "screen and (orientation: landscape) and (min-width: 480px) and (max-width: 767px)"
+mq-tablet-v = "screen and (orientation: portrait) and (min-width: 480px) and (max-width: 767px)"
+
 mq-normal = "screen and (min-width: 768px)"
+mq-to-normal = "screen and (max-width: 768px)"
+mq-to-normal-h = "screen and (orientation: landscape) and (max-width: 768px)"
+mq-to-normal-v = "screen and (orientation: portrait) and (max-width: 768px)"
+
+mq-normal-to-ipad   = "screen and (min-width: 768px) and (max-width: 1023px)"
+mq-normal-to-ipad-h   = "screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1023px)"
+mq-normal-to-ipad-v   = "screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1023px)"
+
+mq-normal-with-ipad   = "screen and (min-width: 768px) and (max-width: 1024px)"
+mq-normal-with-ipad-h   = "screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1024px)"
+mq-normal-with-ipad-v   = "screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px)"
+mq-normal-h-600 = "screen and (max-height: 600px) and (min-width: 768px)"
+
+mq-ipad      = "screen and (max-width: 1024px)"
+mq-ipad-h      = "screen and (orientation: landscape) and (max-width: 1024px)"
+mq-ipad-v      = "screen and (orientation: portrait) and (max-width: 1024px)"
+
+
+
+mq-only-ipad      = "screen and (min-width: 1024px) and (max-width: 1024px)"
+mq-ipad-to-lg   = "screen and (min-width: 1024px) and (max-width: 1919px)"
+mq-ipad-to-1200   = "screen and (min-width: 1024px) and (max-width: 1200px)"
+mq-from-ipad-to-lg   = "screen and (min-width: 1025px) and (max-width: 1919px)"
+mq-from-ipad-to-lg-h   = "screen and (orientation: landscape) and (min-width: 1025px) and (max-width: 1919px)"
+mq-from-ipad-to-lg-v   = "screen and (orientation: portrait) and (min-width: 1025px) and (max-width: 1919px)"
+mq-screen-lg = "screen and (max-width: 1919px)"
+
+mq-ipad-to-sn =  "screen and (min-width: 1024px) and (max-width: 1439px)"
+mq-ipad-to-sn-h =  "screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1439px)"
+mq-ipad-to-sn-v =  "screen and (orientation: portrait) and (min-width: 1024px) and (max-width: 1439px)"
+mq-screen-sn =  "screen and (max-width: 1439px)"
+
+mq-sn-to-lg =  "screen and (min-width: 1440px) and (max-width: 1919px)"

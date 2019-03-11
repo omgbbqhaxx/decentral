@@ -25,65 +25,13 @@
 }
 /* END min width 1025px */
 
-/* BEGIN min width 1025px max width 1205 */
-@media (min-width: 1025px) and (max-width: 1205px) {
-	body.page-header-fixed {
-		padding-top: 121px !important; /* height of the header */
-	}
-
-	.header .header-navigation {
-		display: block !important;
-		clear: both;
-		margin-top: -10px;
-		float: left !important;
-	}
-	.reduce-header .header-navigation {
-		margin-top: -6px;
-	}
-	.header .header-navigation > ul > li {
-		margin-right: 27px;
-	}
-	.header .header-navigation > ul > li > a {
-		padding: 5px 0 18px;
-	}
-	.reduce-header .header-navigation > ul > li > a {
-		padding-bottom: 13px;	
-	}
-	.header .header-navigation > ul > li.active > a, .header .header-navigation > ul > li > a:hover, .header .header-navigation > ul > li > a:focus, .header .header-navigation > ul > li.open > a, .header .header-navigation > ul > li.open > a:hover, .header .header-navigation > ul > li.open > a:focus {
-		background: none;
-	}
-	.header-navigation > ul > li.dropdown:hover > a:after {
-		margin-left: 10px;
-	}
-
-	.dropdown-fix-right .dropdown-menu {
-		left: 0;
-		right: auto;
-	}
-
-	.header .header-navigation li.menu-search {
-		top: 1px;
-		margin-left: -20px;
-	}
-	.ecommerce .header .header-navigation li.menu-search {
-		top: 2px;
-	}
-	.header .header-navigation li.menu-search span.sep {
-		top: 2px;
-		margin-right: 26px;
-	}
-	.header .header-navigation li.menu-search i {
-		top: -4px;
-	}
-}
-/* END min width 1025px max width 1205 */
-
 /* BEGIN max width 1024px */
 @media (max-width: 1024px) {
-	body.page-header-fixed {
-		padding-top: 107px !important; /* height of the header */
-	}
 
+	/*body.page-header-fixed {*/
+		/*padding-top: 107px !important; !* height of the header *!*/
+	/*}*/
+/*
 	.header .mobi-toggler {
 		display: block;
 	}
@@ -134,8 +82,10 @@
 		float: right;
 		margin: 3px 0 0;
 	}
+	*/
 
 	/* dropdown menu */
+	/*
 	.header-navigation .dropdown-menu,
 	.header-navigation > ul > li > .dropdown-menu {
 		position: static;
@@ -279,6 +229,7 @@
 		height: 300px;
 		overflow: auto;
 	}
+	*/
 }
 /* END max width 1024px */
 
@@ -518,6 +469,12 @@
 	.footer .list-inline > li {
 		padding-left: 0;
 		margin-right: 5px;
+		padding-right: 0;
+		font-size: 18px;
+	}
+	.footer .list-inline > li:last-child {
+		padding-right: 0;
+		margin-right: 0;
 	}
 
 

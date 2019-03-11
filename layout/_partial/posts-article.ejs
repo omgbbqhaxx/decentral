@@ -1,0 +1,54 @@
+<div class="article">
+    <div class="article-inner">
+        <div class="article-bg">
+            <div class="article-bg-img" style="background-image: url('<%= url_for(post.thumbnail) %>')"></div>
+        </div>
+        <div class="article-content">
+            <a href="<%- url_for(post.path) %>" class="article-bg-link"></a>
+            <div class="article-content-top">
+                <div class="tags-list">
+                    <%
+                    var tags = post.tags.data;
+                    var tag;
+                    var tagPath;
+                    for(var i = 0; i < tags.length; i++ ) {
+                        tag = tags[i];
+                        tagPath = tags[i].path;
+                    %>
+                    <a href="<%- url_for(tagPath) %>" class="tag-link">
+                        <span class="tag"><%= tag.name %></span>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+            <div class="article-content-bottom">
+                <a href="<%- url_for(post.path) %>" class="article-title"><%= post.title || '(no title)' %></a>
+            </div>
+        </div>
+    </div>
+    <div class="article-bottom">
+        <div class="article-bottom-inner">
+            <div class="article-bottom-left">
+                <span>
+                <span><%= full_date(post.date, 'D MMMM YYYY') %></span>
+
+                <% if (post.comments){ %>
+                    <span>
+                                            <span class="divider">/</span>
+                                            <span >
+                                                <a href="<%- url_for(post.path) %>#disqus_thread" class="article-comment-link">Comments</a>
+                                            </span>
+                                        </span>
+                <% } %>
+                </span>
+            </div>
+            <div class="article-bottom-right">
+                <ul class="share-list">
+                    <li><a class="icon" href="mailto:?subject=The_text_in_the_url&body=Check out this article: <%- post.permalink %>"><i class="icon-close-envelope " aria-hidden="true"></i></a></li>
+                    <li><a class="icon" href="http://www.facebook.com/sharer.php?u=<%- post.permalink %>"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+                    <li><a class="icon" href="https://twitter.com/share?url=<%= post.permalink %>&text=<%= post.title || url_for(post.path) %>"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
